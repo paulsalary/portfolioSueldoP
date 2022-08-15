@@ -1,6 +1,5 @@
      .row{
         padding: 20px;
-        display: flex;
       }
       div{
         background-color: #1269c7;
@@ -9,6 +8,11 @@
       #name{
         font-weight: bold;
         margin-top: 30%;
+        text-align: center;
+      }
+      #title{
+        font-weight: bold;
+        text-align: center;
       }
       
       @media (min-width: 576px){
@@ -17,8 +21,8 @@
             width: 15%;
             border-radius: 100%;
             box-shadow: 3px 3px 3px black;
-            left: 3%;
-            top:630px;
+            left: 10%;
+            top: 65%;
         }
       }
       @media (max-width: 575px){
@@ -28,6 +32,6 @@
             border-radius: 100%;
             box-shadow: 3px 3px 3px black;
             left: 33%;
-            top:600px;
+            top: 78%;
         }
       }
