@@ -9,10 +9,12 @@
         font-weight: bold;
         margin-top: 30%;
         text-align: center;
+        align-self: center;
       }
       #title{
         font-weight: bold;
         text-align: center;
+        align-self: center;
       }
       
       @media (min-width: 576px){
@@ -22,7 +24,7 @@
             border-radius: 100%;
             box-shadow: 3px 3px 3px black;
             left: 10%;
-            top: 65%;
+            top: 94%;
         }
       }
       @media (max-width: 575px){
