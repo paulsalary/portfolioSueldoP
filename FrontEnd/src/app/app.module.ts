@@ -13,6 +13,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardysoftskillsComponent } from './components/hardysoftskills/hardysoftskills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
       "clockwise": false,
       "startFromZero": false,
       "lazy": true
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
