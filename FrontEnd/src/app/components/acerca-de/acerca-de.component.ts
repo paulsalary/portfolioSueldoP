@@ -9,10 +9,10 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
   persona : persona = new persona("","","");
-  constructor(public personService: PersonaService) { }
+  constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personService.getPersona().subscribe(data => {this.persona = data})
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
 }
