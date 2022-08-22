@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -12,7 +13,7 @@ export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router) { }
+  constructor(private sExperiencia: SExperienciaService, private router: Router, private location: Location) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,9 @@ export class NewExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+  cancel() {
+    this.location.back();
   }
 
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-editeducacion',
@@ -14,7 +16,8 @@ export class EditeducacionComponent implements OnInit {
   constructor(
     private educacionS: EducacionService,
     private activatedRouter : ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -39,5 +42,8 @@ export class EditeducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+  cancel() {
+    this.location.back();
   }
 }

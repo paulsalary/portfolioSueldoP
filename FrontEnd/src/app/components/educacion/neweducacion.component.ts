@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-neweducacion',
@@ -12,7 +13,7 @@ export class NeweducacionComponent implements OnInit {
   nombreE: string;
   descripcionE: string;
 
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(private educacionS: EducacionService, private router: Router, private location: Location) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,9 @@ export class NeweducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+  cancel() {
+    this.location.back();
   }
 
 }

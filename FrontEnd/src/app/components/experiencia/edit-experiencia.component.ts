@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -12,7 +13,7 @@ export class EditExperienciaComponent implements OnInit {
   expLab: Experiencia = null;
 
   constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,
-    private router: Router) { }
+    private router: Router, private location: Location) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -36,6 +37,9 @@ export class EditExperienciaComponent implements OnInit {
          this.router.navigate(['']);
       }
     )
+  }
+  cancel() {
+    this.location.back();
   }
 
 }
