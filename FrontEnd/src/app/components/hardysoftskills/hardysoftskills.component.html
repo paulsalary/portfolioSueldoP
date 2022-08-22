@@ -1,44 +1,24 @@
 <div class="row">
     <h1>Hard Skills & Soft Skills</h1>
-    <div class="col-sm-4 col-md-4 col-lg-4"><circle-progress 
-        [percent]="90"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-        [title]="'Ingles'"
-        [subtitle]="''"
-    ></circle-progress>
-</div>
-<div class="col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="75"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-        [title]="'macOS'"
-        [subtitle]="''"
-    ></circle-progress>
-</div>
-<div class="col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="50"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-        [title]="'JS'"
-        [subtitle]="''"
-    ></circle-progress>
+    <div>
+        <button type="button" class="btn btn-dark" routerLink="/nuevahyss" *ngIf="isLogged">
+            <i class="bi bi-plus-circle-fill"></i>
+        </button>
+    </div>
+    <div class="container">
+    <div class="row" *ngFor="let Hardsofts of hardsoft">
+        <div class="col-10 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                attr.style="width:{{Hardsofts.descripcionE}}%" role="progressbar" aria-label="Basic example"
+                attr.aria-valuenow="{{Hardsofts.descripcionE}}" aria-valuemin="0" aria-valuemax="100">
+                {{Hardsofts.nombreH}}</div>
+        </div>
+        <div class="col align-self-center">
+            <button *ngIf="isLogged" class="btn btn-dark" style="float:right" routerLink="/edithyss/{{Hardsofts.id}}">
+                <i class="bi bi-pencil-fill"></i></button>
+            <button *ngIf="isLogged" class="btn btn-danger" style="float:right" (click)="delete(Hardsofts.id)">
+                <i class="bi bi-trash-fill"></i></button>
+        </div>
+    </div>
 </div>
 </div>

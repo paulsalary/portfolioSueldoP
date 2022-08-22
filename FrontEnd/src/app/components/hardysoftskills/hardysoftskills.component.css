@@ -1,4 +1,15 @@
 .row {
-    background-color: #1269c7;
     padding: 20px;
 }
+.progress-bar{
+    height: 25px; 
+}
+.progress {
+    height: 25px; 
+    padding: 0px;
+    font-size: 1.5em ;
+    font-weight: 700;
+    margin: 20px;
+    
+}
+

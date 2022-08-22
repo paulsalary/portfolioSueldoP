@@ -1,23 +1,25 @@
 .row{
     padding: 20px;
 }
-div{
-    background-color: #1269c7;
-}
 h1,h3 {
     display: flex;
 }
 .card{
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     display: inline;
     transition: all 0.2s ease;
-    background-color: rgb(49, 114, 211);
+    background-color: #81b3e6;
+    border: 0.5px;
 }
 
 .card:hover{
 
     box-shadow: 5px 6px 6px 2px;
     transform: scale(1.1);
+}
+
+.btn {
+    margin: 5px;
 }
 

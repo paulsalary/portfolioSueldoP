@@ -11,7 +11,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { HardysoftskillsComponent } from './components/hardysoftskills/hardysoftskills.component';
+import { HyssComponent } from './components/hardysoftskills/hardysoftskills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +24,8 @@ import { NeweducacionComponent } from './components/educacion/neweducacion.compo
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 import { NewproyectoComponent } from './components/proyectos/nuevoproyecto.component';
 import { EditProyectoComponent } from'./components/proyectos/editproyecto.component';
+import { NewhyssComponent } from './components/hardysoftskills/newhyss.component';
+import { EdithyssComponent } from './components/hardysoftskills/edithyss.component';
 
 
 @NgModule({
@@ -36,7 +38,7 @@ import { EditProyectoComponent } from'./components/proyectos/editproyecto.compon
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    HardysoftskillsComponent,
+    HyssComponent,
     ProyectosComponent,
     HomeComponent,
     LoginComponent,
@@ -45,30 +47,15 @@ import { EditProyectoComponent } from'./components/proyectos/editproyecto.compon
     NeweducacionComponent,
     EditeducacionComponent,
     NewproyectoComponent,
-    EditProyectoComponent
+    EditProyectoComponent,
+    NewhyssComponent,
+    EdithyssComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgCircleProgressModule.forRoot({
-      "radius": 60,
-      "space": -10,
-      "outerStrokeGradient": true,
-      "outerStrokeWidth": 10,
-      "outerStrokeColor": "#4882c2",
-      "outerStrokeGradientStopColor": "#53a9ff",
-      "innerStrokeColor": "#e7e8ea",
-      "innerStrokeWidth": 10,
-      "title": "UI",
-      "animateTitle": false,
-      "animationDuration": 1000,
-      "showUnits": false,
-      "showSubtitle": true,
-      "showBackground": false,
-      "clockwise": false,
-      "startFromZero": false,
-      "lazy": true
     }),
     HttpClientModule
   ],

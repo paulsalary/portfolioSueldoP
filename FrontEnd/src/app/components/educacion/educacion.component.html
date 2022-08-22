@@ -1,30 +1,24 @@
 <div class="row">
     <h1>Educacion</h1>
-    <div class="col-lg-2">
+
+    <div>
         <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-            Agregar Educacion
+            <i class="bi bi-plus-circle-fill"></i>
         </button>
     </div>
 
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td>
-                        <h2>{{Educacion.nombreE}}</h2>
-                    </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <div class="card" *ngFor="let Educacion of educacion">
+        <div class="card-header">
+            {{Educacion.nombreE}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{Educacion.nombreE}}</h5>
+          <p class="card-text">{{Educacion.descripcionE}}</p>
+          <div class="text-end">
+            <button *ngIf="isLogged" class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}">
+                  <i class="bi bi-pencil-fill"></i></button>
+              <button *ngIf="isLogged" class="btn btn-danger" (click)="delete(Educacion.id)">
+                  <i class="bi bi-trash-fill"></i></button>
+              </div>
+        </div>
+      </div>

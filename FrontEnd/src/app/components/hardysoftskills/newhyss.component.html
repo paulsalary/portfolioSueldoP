@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreE">Nombre de hard o soft skill</label>
+                    <input type="text" class="form-control-lg" id="nombreE" name="nombreE" [(ngModel)]="nombreH" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionE">Cantidad de porcentaje</label>
+                    <input type="text" class="form-control" rows="3" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                </div>
+                <button class="btn btn-primary">
+                    Agregar hard o soft skill
+                </button>
+                <button class="btn btn-danger" (click)="cancel()">
+                    Cancelar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
