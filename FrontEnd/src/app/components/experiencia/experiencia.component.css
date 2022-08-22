@@ -10,5 +10,14 @@ h1,h3 {
 .card{
     padding: 20px;
     align-items: center;
+    display: inline;
+    transition: all 0.2s ease;
+    background-color: rgb(49, 114, 211);
+}
+
+.card:hover{
+
+    box-shadow: 5px 6px 6px 2px;
+    transform: scale(1.1);
 }
 

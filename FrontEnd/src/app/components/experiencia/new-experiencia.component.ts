@@ -12,6 +12,8 @@ import { Location } from '@angular/common';
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  urlE: string = '';
+  aniosE: string = '';
 
   constructor(private sExperiencia: SExperienciaService, private router: Router, private location: Location) { }
 
@@ -19,7 +21,7 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.urlE, this.aniosE);
     this.sExperiencia.save(expe).subscribe(
       data => {
         alert("Experiencia añadida");
