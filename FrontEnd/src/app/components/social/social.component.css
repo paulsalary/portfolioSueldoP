@@ -5,3 +5,13 @@ img{
 button{
     margin: 5px;
 }
+
+.bi::before {
+    vertical-align: bottom;
+    padding: 0.25em;
+  }
+
+.btn {
+   vertical-align: middle; 
+   padding: 1em;
+}

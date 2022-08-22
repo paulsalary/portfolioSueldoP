@@ -5,23 +5,10 @@ div{
     background-color: #1269c7;
 }
 h1,h3 {
-    display: inline;
+    display: flex;
 }
-ul{
-    padding-left: 0px;
-}
-
-.imgUnl {
-    width: 70%;
-    display: inline-block;
-    margin: 20px;
-    margin-top: 0px;
+.card{
+    padding: 20px;
+    align-items: center;
 }
 
-.imgBC {
-    width: 70%;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 20px;
-    margin-top: 0px;
-}
