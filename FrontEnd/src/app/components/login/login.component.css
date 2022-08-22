@@ -13,3 +13,10 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
+.spectrum-background {
+    background:
+    linear-gradient(lightblue, transparent),
+    linear-gradient(to top left, rgb(21, 163, 199), transparent),
+    linear-gradient(to top right, #4682B4, transparent);
+    background-blend-mode: screen;
+}
