@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class NewhyssComponent implements OnInit {
   nombreH: string;
   descripcionE: string;
+  iconoH: string;
 
   constructor(private hyssS: HyssService, private router: Router, private location: Location) { }
 
@@ -19,7 +20,7 @@ export class NewhyssComponent implements OnInit {
   }
 
   onCreate(): void{
-    const educacion = new Hyss(this.nombreH, this.descripcionE);
+    const educacion = new Hyss(this.nombreH, this.descripcionE, this.iconoH);
     this.hyssS.save(educacion).subscribe(
       data =>{
         alert("Educacion añadida correctamente");

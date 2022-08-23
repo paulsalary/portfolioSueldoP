@@ -4,11 +4,15 @@
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreE">Nombre de hard o soft skill</label>
-                    <input type="text" class="form-control-lg" id="nombreE" name="nombreE" [(ngModel)]="nombreH" required>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreH" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcionE">Cantidad de porcentaje</label>
-                    <input type="text" class="form-control" rows="3" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                </div>
+                <div class="form-group">
+                    <label for="iconoH">Icono de la Hard o Soft Skill (buscar en <a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></label>
+                    <input type="text" class="form-control" id="iconoH" name="iconoH" [(ngModel)]="iconoH" required>
                 </div>
                 <button class="btn btn-primary">
                     Agregar hard o soft skill

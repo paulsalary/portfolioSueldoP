@@ -2,30 +2,24 @@
   <h1>Proyectos</h1>
   <div class="col-lg-2">
       <button type="button" class="btn btn-dark" routerLink="/nuevoproyecto" *ngIf="isLogged">
-          Nuevo Proyecto
+        <i class="bi bi-plus-circle-fill"></i>
       </button>
   </div>
 
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-      <table class="table">
-          <tbody>
-              <tr *ngFor="let Proyectos of proy">
-                  <td>
-                      <h2>{{Proyectos.nombreE}}</h2>
-                  </td>
-                  <td>{{Proyectos.descripcionE}}</td>
-                  <td *ngIf="isLogged">
-                      <button class="btn btn-dark" routerLink="/editproyecto/{{Proyectos.id}}">
-                          <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                  </td>
-                  <td *ngIf="isLogged">
-                      <button class="btn btn-danger" (click)="delete(Proyectos.id)">
-                          <i class="bi bi-trash-fill"></i> BORRAR</button>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
-  </div>
-
-</div>
+<div class="accordion" id="proyectosaccordion">
+    <div class="accordion-item" *ngFor="let Proyectos of proy">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        {{Proyectos.nombreE}}
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong><a target="_blank" href="https://{{Proyectos.urlP}}">{{Proyectos.urlP}}</a></strong> {{Proyectos.descripcionE}}
+        </div>
+        <button class="btn btn-dark float-end" routerLink="/editproyecto/{{Proyectos.id}}" *ngIf="isLogged">
+            <i class="bi bi-pencil-fill"></i></button>
+        <button class="btn btn-danger float-end" (click)="delete(Proyectos.id)" *ngIf="isLogged">
+            <i class="bi bi-trash-fill"></i></button>
+      </div>
+    </div>

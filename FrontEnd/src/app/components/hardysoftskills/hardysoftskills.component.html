@@ -7,7 +7,10 @@
     </div>
     <div class="container">
     <div class="row" *ngFor="let Hardsofts of hardsoft">
-        <div class="col-10 progress">
+        <div class="align-items-center b1" style="float:left">
+            <i class="{{Hardsofts.iconoH}}"></i>
+        </div>
+        <div class="col-9 progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
                 attr.style="width:{{Hardsofts.descripcionE}}%" role="progressbar" aria-label="Basic example"
                 attr.aria-valuenow="{{Hardsofts.descripcionE}}" aria-valuemin="0" aria-valuemax="100">
