@@ -30,3 +30,6 @@
             box-shadow: 3px 3px 3px black;
         }
       }
+      .btn {
+        margin: 5px;
+    }

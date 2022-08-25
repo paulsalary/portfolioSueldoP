@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EdithyssComponent } from './components/hardysoftskills/edithyss.component';
 import { NewhyssComponent } from './components/hardysoftskills/newhyss.component';
+import { NewpersonaComponent } from './components/acerca-de/newpersona.component';
+import { EditpersonaComponent } from './components/acerca-de/editpersona.component';
 
 const routes: Routes = [
   {path:'',component : HomeComponent},
@@ -21,7 +23,10 @@ const routes: Routes = [
   {path:'nuevoproyecto', component: NewproyectoComponent},
   {path:'editproyecto/:id', component: EditProyectoComponent},
   {path:'nuevahyss', component: NewhyssComponent},
-  {path:'edithyss/:id', component: EdithyssComponent}
+  {path:'edithyss/:id', component: EdithyssComponent},
+  {path: 'nuevapersona', component: NewpersonaComponent},
+  {path: 'editpersona/:id', component: EditpersonaComponent},
+
 ];
 
 @NgModule({

@@ -26,6 +26,8 @@ import { NewproyectoComponent } from './components/proyectos/nuevoproyecto.compo
 import { EditProyectoComponent } from'./components/proyectos/editproyecto.component';
 import { NewhyssComponent } from './components/hardysoftskills/newhyss.component';
 import { EdithyssComponent } from './components/hardysoftskills/edithyss.component';
+import { EditpersonaComponent } from './components/acerca-de/editpersona.component';
+import { NewpersonaComponent } from './components/acerca-de/newpersona.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { EdithyssComponent } from './components/hardysoftskills/edithyss.compone
     NewproyectoComponent,
     EditProyectoComponent,
     NewhyssComponent,
-    EdithyssComponent
+    EdithyssComponent,
+    EditpersonaComponent,
+    NewpersonaComponent
   ],
   imports: [
     BrowserModule,

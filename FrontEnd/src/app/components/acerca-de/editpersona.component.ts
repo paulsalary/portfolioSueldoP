@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Educacion } from 'src/app/model/educacion';
-import { EducacionService } from 'src/app/service/educacion.service';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-editeducacion',
-  templateUrl: './editeducacion.component.html',
-  styleUrls: ['./editeducacion.component.css']
+  selector: 'app-editpersona',
+  templateUrl: './editpersona.component.html',
+  styleUrls: ['./editpersona.component.css']
 })
-export class EditeducacionComponent implements OnInit {
-  educacion: Educacion = null;
+export class EditpersonaComponent implements OnInit {
+  persona: Persona = null;
   
   constructor(
-    private educacionS: EducacionService,
+    private personaS: PersonaService,
     private activatedRouter : ActivatedRoute,
     private router: Router,
     private location: Location
@@ -21,9 +21,9 @@ export class EditeducacionComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.detail(id).subscribe(
+    this.personaS.detail(id).subscribe(
       data =>{
-        this.educacion = data;
+        this.persona = data;
       }, err =>{
          alert("Error al modificar");
          this.router.navigate(['']);
@@ -33,11 +33,11 @@ export class EditeducacionComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.update(id, this.educacion).subscribe(
+    this.personaS.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la educacion");
+        alert("Error al modificar la persona");
         this.router.navigate(['']);
       }
     )

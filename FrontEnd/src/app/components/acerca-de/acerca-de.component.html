@@ -1,14 +1,22 @@
-<div class="row spectrum-background">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" style="background-color: transparent;">
-        <img src="../../../assets/fotodeperfil.jpg" img="img-fluid" id="profilePic" alt="Imagen de Perfil">
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" style="background-color: transparent;">
-        <p id="name">{{persona.nombre}} {{persona.apellido}}</p>
-        <p id="title">Full Stack Developer Jr</p>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 align-self-center" style="background-color: transparent;">
-            <h1>Acerca de mí</h1>
-            <p>Soy Licenciado en Educación Física recibido en la Universidad Nacional de Rosario (UNR). Soy una persona proactiva, responsable, con buenas relaciones interpersonales, que se adapta con facilidad a diferentes entornos. Quisiera incorporarme a una entidad que me permita aplicar los conocimientos aprendidos y contribuir con mi dedicación y compromiso.</p>
-    </div>
-  </div>
+<div class="row">
+    <button type="button" class="btn btn-dark" routerLink="/nuevapersona" *ngIf="isLogged">
+    <i class="bi bi-plus-circle-fill"></i></button>
+        <div *ngFor="let Persona of persona">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <img src="../../../assets/fotodeperfil.jpg" id="profilePic" img="img-fluid" alt="...">
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <p id="name">{{Persona.nombre}} {{Persona.apellido}}</p>
+                <p id="title">Full Stack Developer Jr</p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 align-self-center" style="background-color: transparent;">
+                    <h1>Acerca de mí</h1>
+                    <p>{{Persona.acercaDe}}</p>
+            </div>
+            <button *ngIf="isLogged" class="btn btn-dark" routerLink="/editpersona/{{Persona.id}}">
+                <i class="bi bi-pencil-fill"></i></button>
+            <button *ngIf="isLogged" class="btn btn-danger" (click)="delete(Persona.id)">
+                <i class="bi bi-trash-fill"></i></button>
+        </div>
+</div>
   

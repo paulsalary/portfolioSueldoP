@@ -7,7 +7,7 @@ import { Hyss } from '../model/hyss';
   providedIn: 'root'
 })
 export class HyssService {
-  URL = 'http://localhost:8080/hyss/';
+  URL = 'https://backendpds.herokuapp.com/hyss/';
 
   constructor(private httpClient : HttpClient) { }
 
